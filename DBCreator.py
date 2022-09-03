@@ -16,4 +16,3 @@ sqlMessage = 'Table Test created successfully. Please access pgAdmin to verify t
 
 # Execute the SQL command.
 my_db.query(sqlCommand, '')
-

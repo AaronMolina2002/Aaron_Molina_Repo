@@ -35,5 +35,4 @@ class MyDB(object):
     def __del__(self):
         if self._db_connection is not None:
             self._db_connection.close()
-
-          sqlCommand = 'DROPTABLE[Molina_Aaron_Table]'
+            sqlCommand = 'DROP TABLE [Molina_Aaron_Table]'
