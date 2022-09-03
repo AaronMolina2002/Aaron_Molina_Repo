@@ -1,8 +1,7 @@
-# This file is to see my name print out in this file.
-
+# This file is to show my code printing out my name.
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
-    print('Aaron Molina')  # Press ⌘F8 to toggle the breakpoint.
+    print('Aaron Molina')  # Press Ctrl+F8 to toggle the breakpoint.
 
 
 # Press the green button in the gutter to run the script.
