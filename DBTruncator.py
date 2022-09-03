@@ -1,43 +1,18 @@
 """
-This class is used to connect your python to your cybr DB using the credentials used in the class.
-You will need to install the imported packages (refer to lecture 2 slides).
-You may also install it directly from here.
+This class tests the connection to your DB by creating a test table
 """
 
-# Package to connect to PostgreSQL
-import psycopg2
+# Import the connector class
+import DBConnector
 
-# Ignore this for now.
-# import psycopg2-binary.
+# Create a new instance of the DB
+my_db = DBConnector.MyDB()
 
+# SQL command to create a new table
+sqlCommand = 'DROP TABLE Molina_Aaron_Table;'
 
-class MyDB(object):
-    _db_connection = None
-    _db_cur = None
+# Message to display upon table creation. Not integrated yet.
+sqlMessage = 'Table Test created successfully. Please access pgAdmin to verify table was created successfully'
 
-    def __init__(self):
-        # Ensure you are using your credentials here.
-        # No need to change if you followed the instructions in the class/ slides.
-
-        self._db_connection = psycopg2.connect(host='localhost', user='cyberUser', password='c-4-9-3-A',
-                                               dbname='cybrDB')
-        self._db_connection.set_isolation_level(psycopg2.extensions.ISOLATION_LEVEL_AUTOCOMMIT)
-        self._db_cur = self._db_connection.cursor()
-
-    def query(self, query, params):
-        first_return = self._db_cur.execute(query, params)
-        try:
-            return_me = self._db_cur.fetchall()
-        except Exception:
-            return_me = first_return
-        return return_me
-
-    def __del__(self):
-        if self._db_connection is not None:
-            self._db_connection.close()
-
-# Where I coded to drop my table in DBCreator.
-    import DBTruncator
-    my_db = DBTruncator.MyDB()
-    sqlCommand = 'DROP TABLE [Molina_Aaron_Table];'
-    my_db.query(sqlCommand, '')
+# Execute the SQL command.
+my_db.query(sqlCommand, '')
