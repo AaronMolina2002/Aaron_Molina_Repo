@@ -35,4 +35,9 @@ class MyDB(object):
     def __del__(self):
         if self._db_connection is not None:
             self._db_connection.close()
-            sqlCommand = 'DROP TABLE [Molina_Aaron_Table]'
+
+# Where I coded to drop my table in DBCreator.
+    import DBTruncator
+    my_db = DBTruncator.MyDB()
+    sqlCommand = 'DROP TABLE [Molina_Aaron_Table];'
+    my_db.query(sqlCommand, '')
