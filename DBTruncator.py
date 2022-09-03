@@ -7,8 +7,8 @@ You may also install it directly from here.
 # Package to connect to PostgreSQL
 import psycopg2
 
-# Ignore this for now
-# import psycopg2-binary
+# Ignore this for now.
+# import psycopg2-binary.
 
 
 class MyDB(object):

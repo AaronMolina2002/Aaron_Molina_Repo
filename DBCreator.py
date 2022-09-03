@@ -1,5 +1,5 @@
 """
-This class tests the connection to your DB by creating a test table
+This class tests the connection to your DB by creating a test table.
 """
 
 # Import the connector class

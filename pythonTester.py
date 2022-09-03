@@ -1,4 +1,4 @@
-# This file is to see my name print out in code.
+# This file is to see my name print out in this file.
 
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
