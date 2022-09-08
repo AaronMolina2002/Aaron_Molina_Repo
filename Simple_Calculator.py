@@ -1,8 +1,8 @@
-num1 = int(input("Please enter a value for the first number: "))
+num1 = float(input("Please enter a value for the first number: "))
 
 operator = input("Please enter an operator you wish to use: ")
 
-num2 = int(input("Please enter a value for the second number: "))
+num2 = float(input("Please enter a value for the second number: "))
 
 if operator == "+":
     total = str(num1 + num2)
