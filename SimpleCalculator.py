@@ -15,8 +15,8 @@ def Simple_Calculator():
         print("The total is: " + total)
 
     if operator == "*":
-         total = str(num1 * num2)
-         print("The total is: " + total)
+        total = str(num1 * num2)
+        print("The total is: " + total)
 
     if operator == "/":
         total = str(num1 / num2)
