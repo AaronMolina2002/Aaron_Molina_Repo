@@ -1,4 +1,5 @@
 """
+Aaron Molina
 This is a fancy-ish calculator.
 This accepts one user input, the equation
 prints out the output
@@ -37,4 +38,5 @@ def Fancy_Calculator():
     if op == "*":
         total = str(val1 * val2)# add a variable named total to multiple both values.
 
+    # returns the total variable
     return total
