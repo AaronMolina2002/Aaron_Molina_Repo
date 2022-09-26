@@ -4,10 +4,9 @@ Imports the FancyCalculator, SimpleCalculator, and PasswordChecker to use each o
 """
 
 # import all the python files we want for this file.
-import SimpleCalculator
 import FancyCalculator
-import PasswordChecker
-import re
+
+
 # create a main method
 def main():
 
