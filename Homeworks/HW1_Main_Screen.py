@@ -5,8 +5,8 @@ Imports the FancyCalculator, SimpleCalculator, and PasswordChecker to use each o
 
 # import all the python files we want for this file.
 import FancyCalculator
-
-
+import Homework_1
+import In_Class_Activities
 # create a main method
 def main():
 
@@ -16,12 +16,14 @@ def main():
     # create if statements for the password checker file
     if program == "Password checker":
         password = input("Please enter a password: ")# created variable to prompts user to enter a password and stores that input in the variable
-        PasswordChecker.Correct_Password_Response(password)# goes to the PasswordChecker file
-        print("Your password is {0}".format(password))# prints to user their password they inputed
+        if Homework_1.Correct_Password_Response(password):# goes to the PasswordChecker file
+            print("Your password is {0}".format(password))# prints to user their password they inputed
+        else:
+            print("Invalid password.")
 
     # created if statement for the simple calculator file
     elif program == "Simple Calculator":
-        SimpleCalculator.Simple_Calculator()# goes to the SimpleCalculator file
+        In_Class_Activities.Simple_Calculator()# goes to the SimpleCalculator file
 
     # created if statement for the fancy calculator file
     elif program == "Fancy Calculator":
