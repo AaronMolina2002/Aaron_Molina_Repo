@@ -1,4 +1,5 @@
 import requests
+
 from lxml import html
 
 def get_web_tree(link):
