@@ -22,6 +22,14 @@ main_tree = get_web_tree("https://bugs.launchpad.net/ubuntu/+bugs?field.searchte
 bugid = main_tree.xpath('//*[@class="bugnumber"]//text()')
 bugid = [item.replace('#', '')for item in bugid]
 print(bugid)
+print(str(len(bugid)))
 
-PackageName = main_tree.xpath('//*[@class="sprite package-source field"]//text()')
-print(list(map(lambda x:x.strip(),PackageName)))
+PackageName = main_tree.xpath('//*[@class="buginfo-extra"]//text()')
+PackageName = [x for x in PackageName if len(x) > 3]
+PackageName = [ele for ele in PackageName if ele.strip()]
+for i,s in enumerate(PackageName):
+     PackageName[i] = s.strip()
+print(PackageName)
+# PackageName = [s_l for s_l in PackageName if not (None in s_l or any(len(x) < 3 for x in s_l))]
+# print(PackageName)
+print(str(len(PackageName)))
