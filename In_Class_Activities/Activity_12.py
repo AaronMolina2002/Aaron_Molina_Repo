@@ -65,6 +65,8 @@ def GetBugInfo(bug_package, bug_list):
     """
     bugIDCounter = 0
     bugPackageCounter = 0
+
+    main_tree = wb.get_web_tree(link)
     # while loop to add one to the bug package and bug number to create a unique URL for each bug
     while bugIDCounter < 75:
         bug_package = [ele.replace(' (Ubuntu)', '') for ele in bug_package]
