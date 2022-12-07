@@ -16,21 +16,21 @@ def CreateTablesAndFillData():
     # Your code goes here.
     userName1 = "User1"
     password1 = "pass1"
-    admin1 = "true"
+
     userName2 = "User2"
     password2 = "pass2"
-    admin2 = "false"
+
     userName3 = "User3"
     password3 = "pass3"
-    admin3 = "false"
 
-    sqlCommand = 'CREATE TABLE IF NOT EXISTS AaronMolina_Users (Username  VARCHAR, Password  VARCHAR, Admin BOOL);'
+    sqlCommand = 'CREATE TABLE IF NOT EXISTS AaronMolina_Users (Username  VARCHAR, Password  VARCHAR, Admin BOOLEAN);'
     my_db.query(sqlCommand, '')
 
     sqlCommand = 'INSERT INTO AaronMolina_Users VALUES(%s, %s, %s);'
-    my_db.query(sqlCommand, (userName1, password1, admin1,))
-    my_db.query(sqlCommand, (userName2, password2, admin2,))
-    my_db.query(sqlCommand, (userName3, password3, admin3,))
+    my_db.query(sqlCommand, (userName1, password1, True))
+    my_db.query(sqlCommand, (userName2, password2, False))
+    my_db.query(sqlCommand, (userName3, password3, False))
+
 
 def main():
     """
